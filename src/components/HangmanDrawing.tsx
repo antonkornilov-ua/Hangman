@@ -1,3 +1,5 @@
+import styles from './../styles/Hangman.module.css'
+
 const HEAD = (
     <div style={{
         width: '50px',
@@ -76,7 +78,9 @@ type HangmanDrawingProps = {
 
 export function HangmanDrawing({ numberOfGuesses }: HangmanDrawingProps) {
     return (
-        <div style={{ position: 'relative' }}>
+        <div
+            className={styles.hangman}
+            style={{ position: 'relative' }}>
             {BODY_PARTS.slice(0, numberOfGuesses)}
             <div
                 style={{ height: '50px', width: '10px', background: 'black', top: 0, right: 0, position: 'absolute' }}
